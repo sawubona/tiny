@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+.yellow-block {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  background-color: #fcdb00;
+}
+.yellow-block__logo {
+  flex: 1 1 auto;
+  text-decoration: none;
+  color: #010101;
+  font-family: PT Sans;
+  font-weight: bold;
+  font-size: 30px;
+}
+.yellow-block__slider {
+  flex: 1 1 596px;
+}
+.yellow-block__nav {
+  flex: 0 1 145px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.yellow-block__nav ul {
+  list-style: none;
+  flex: 1 1 auto;
+}
+.nav-point {
+  font-family: PT Sans;
+  font-weight: bold;
+  font-size: 22px;
+}
+.gray-block {
+  flex: 1 1 auto;
+}
+.black-block {
+  flex: 1 1 auto;
+}
