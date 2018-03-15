@@ -168,8 +168,6 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  padding-left: 5%;
-  padding-right: 5%;
   padding-top: 5%;
 }
 .gray-block__cards article {
@@ -195,5 +193,123 @@ body {
   color: #898989;
 }
 .black-block {
+  flex: 1 1 auto;
+}
+.black-block {
+  flex: 1 1 741px;
+  display: flex;
+  flex-direction: column;
+  padding-left: 15%;
+  padding-right: 15%;
+  background-color: #010101;
+}
+.black-block__title {
+  flex: 0 1 200px;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  align-items: center;
+  justify-content: flex-end;
+}
+.black-block__title h2 {
+  font-size: 32px;
+  font-family: PT Sans;
+  font-weight: bold;
+  margin-top: 0;
+  color: #fcdb00;
+}
+.black-block__title span {
+  font-size: 20px;
+  font-family: PT Sans;
+  font-weight: normal;
+  margin-top: 0;
+  text-align: center;
+  padding-left: 15%;
+  padding-right: 15%;
+  color: #898989;
+}
+.black-block__form {
+  flex: 0 1 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+}
+.black-block__form [type="email"] {
+  width: 580px;
+  height: 50px;
+  border: none;
+  padding: 0;
+  border-radius: 5px;
+  padding-left: 25px;
+  outline: none;
+  font-size: 16px;
+  font-family: PT Sans;
+  font-weight: normal;
+}
+.black-block__form [type="submit"] {
+  width: 125px;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-family: PT Sans;
+  font-weight: bold;
+  margin-left: 20px;
+  background-color: #fcdb00;
+  outline: none;
+}
+.black-block__icons {
+  flex: 0 1 150px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+}
+.black-block__icons li {
+  width: 45px;
+  height: 45px;
+  background-color: #fcdb00;
+  margin: 15px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.futer {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: row;
+  color: #fff;
+  font-size: 16px;
+  font-family: PT Sans;
+  font-weight: normal;
+  padding-top: 5%;
+}
+.futer ul {
+  list-style: none;
+  padding: 0;
+}
+.futer address {
+  flex: 1 1 30%;
+  font-style: normal;
+}
+.futer address a {
+  text-decoration: none;
+  color: #fff;
+}
+.futer .futer__links {
+  flex: 3 1 70%;
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+}
+.futer .link-block {
   flex: 1 1 auto;
 }

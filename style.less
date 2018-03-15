@@ -201,7 +201,6 @@ body {
     .flexE(1, 1, 541px);
     .row();
     flex-wrap: wrap;
-    .smPadd();
     padding-top: 5%;
     article{
         .flexE(1, 1, 33.3333%);
@@ -227,4 +226,117 @@ body {
 
 .black-block {
     .flexE(1);
+}
+
+.black-block {
+    .flexE(1, 1, 741px);
+    .col();
+    .mainPadd();
+    background-color: @black;
+}
+
+.black-block__title {
+    .flexE(0, 1, 200px);
+    .col();
+    align-self: @start;
+    align-items: @center;
+    justify-content: @end;
+    h2 {
+        font-size: 32px;
+        font-family: PT Sans;
+        font-weight: bold;
+        margin-top: 0;
+        color: @yell;
+    }
+    span {
+        font-size: 20px;
+        font-family: PT Sans;
+        font-weight: normal;
+        margin-top: 0;
+        text-align: @center;
+        .mainPadd();
+        color: #898989;
+    }
+}
+
+.black-block__form {
+    .flexE(0, 1, 100px);
+    .row();
+    justify-content: @center;
+    align-items: @end;
+    [type="email"] {
+        width: 580px;
+        height: 50px;
+        border: none;
+        padding: 0;
+        border-radius: 5px;
+        padding-left: 25px;
+        outline: none;
+        font-size: 16px;
+        font-family: PT Sans;
+        font-weight: normal;
+    }
+    [type="submit"] {
+        width: 125px;
+        height: 50px;
+        border: none;
+        border-radius: 5px;
+        text-transform: uppercase;
+        font-size: 16px;
+        font-family: PT Sans;
+        font-weight: bold;
+        margin-left: 20px;
+        background-color: @yell;
+        outline: none;
+    }
+}
+
+.black-block__icons {
+    .flexE(0, 1, 150px);
+    .row();
+    justify-content: @center;
+    align-items: @center;
+    list-style: none;
+    padding: 0;
+    li {
+        width: 45px;
+        height: 45px;
+        background-color: @yell;
+        margin: 15px;
+        border-radius: 5px;
+        .col();
+        justify-content: @center;
+        align-items: @center;
+        cursor: pointer;
+    }
+}
+.futer {
+    .flexE(1);
+    .row();
+    color: #fff;
+    font-size: 16px;
+    font-family: PT Sans;
+    font-weight: normal;
+    padding-top: 5%;
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+    address {
+        .flexE(1, 1, 30%);
+        font-style: normal;
+        a {
+           text-decoration: none;
+           color: #fff;
+        }
+    }
+    .futer__links {
+        .flexE(3, 1, 70%);
+        .row();
+        margin: 0;
+        padding: 0;
+    }
+    .link-block {
+        .flexE(1);
+    }
 }
