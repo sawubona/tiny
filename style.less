@@ -33,6 +33,7 @@
 @se: space-evenly;
 @str: stretch;
 @base: baseline;
+
 @yell:#fcdb00;
 @black: #010101;
 
@@ -101,30 +102,47 @@ body {
 .slider-left {
     .col();
     .flexE(1, 1, 50%);
-    padding-right: 20%;
+    padding-right: 40%;
+    @media (min-width: 900px){
+        padding-right: 20%;
+    }    
     box-sizing: border-box;
     justify-content: @center;
     h2 {
         .flexE(0);
-        font-size: 32px;
+        font-size: 28px;
         font-family: PT Sans;
         font-weight: bold;
         margin-top: 0;
+        margin-bottom: 10px;
+        line-height: 100%;
+        @media (min-width: 900px){
+            margin-bottom: 25px;
+            font-size: 32px;
+        }
     }
     span {
         .flexE(0);
-        font-size: 20px;
+        font-size: 18px;
         font-family: PT Sans;
         font-weight: normal;
         color: #313841;
+        @media (min-width: 900px){
+            font-size: 20px;
+        }
     }
     p {
         .flexE(0);
-        font-size: 16px;
+        font-size: 14px;
         font-family: PT Sans;
         font-weight: normal;
         color: #555555;
-    }
+        margin-top: 5px;
+        @media (min-width: 900px){
+            margin-top: 10px;
+            font-size: 16px;
+        }
+    } 
 }
 
 .slide-icons {
@@ -136,10 +154,17 @@ body {
 }
 
 .slider-right {
-    .flexE(1, 1, 50%);
+    .flexE(2, 1, 50%);
     .col();
-    align-items: @center;
     justify-content: @center;
+    align-items: @end; 
+    padding-top: 10%;
+    @media (min-width: 920px){
+        .flexE(1, 1, 50%);
+        align-items: @center;
+        padding-top: 0;
+    }  
+    
 }
 
 .i-pad {
@@ -180,47 +205,72 @@ body {
     .flexE(1, 1, 200px);
     .col();
     align-items: @center;
-    justify-content: @end;
+    justify-content: @center;
+    @media (min-width: 900px){
+        justify-content: @end;
+    } 
     h2 {
-        font-size: 32px;
+        font-size: 28px;
         font-family: PT Sans;
         font-weight: bold;
         margin-top: 0;
+        @media (min-width: 900px){
+            font-size: 32px;
+        }    
     }
     span {
-        font-size: 20px;
+        font-size: 18px;
         font-family: PT Sans;
         font-weight: normal;
         margin-top: 0;
         text-align: @center;
-        .mainPadd();
+        .mPadd();
         color: #313841;
+        line-height: 120%;
+        @media (min-width: 900px){
+            font-size: 20px;
+            .mainPadd();
+        }    
     }
 }
+
 .gray-block__cards {
     .flexE(1, 1, 541px);
     .row();
     flex-wrap: wrap;
     padding-top: 5%;
     article{
-        .flexE(1, 1, 33.3333%);
+        .flexE(1, 1, 50%); 
         .row();
+        @media (min-width: 900px){ 
+           .flexE(1, 1, 33.3333%); 
+        }
         i{
-            .mPadd(); 
+            .smPadd();
+            @media (min-width: 900px){ 
+                .mPadd();
+            }
         }
     }
     h3 {
-        font-size: 20px;
+        font-size: 18px;
         font-family: PT Sans;
         font-weight: bold;
         margin-top: 0;
+        margin-bottom: 5px;
+        @media (min-width: 900px){ 
+            font-size: 20px;
+        }
     }
     p {
-        font-size: 16px;
+        font-size: 12px;
         font-family: PT Sans;
         font-weight: normal;
         margin: 0;
         color: #898989;
+        @media (min-width: 900px){ 
+            font-size: 16px;
+        }
     }
 }
 
@@ -242,20 +292,28 @@ body {
     align-items: @center;
     justify-content: @end;
     h2 {
-        font-size: 32px;
+        font-size: 28px;
         font-family: PT Sans;
         font-weight: bold;
         margin-top: 0;
         color: @yell;
+        @media (min-width: 900px){
+            font-size: 32px;
+        } 
     }
     span {
-        font-size: 20px;
+        font-size: 18px;
         font-family: PT Sans;
         font-weight: normal;
         margin-top: 0;
         text-align: @center;
-        .mainPadd();
         color: #898989;
+        .mPadd();
+        line-height: 120%;
+        @media (min-width: 900px){
+            font-size: 20px;
+            .mainPadd();
+        }
     }
 }
 
@@ -263,7 +321,10 @@ body {
     .flexE(0, 1, 100px);
     .row();
     justify-content: @center;
-    align-items: @end;
+    align-items: @center;
+    @media (min-width: 900px){
+        align-items: @end;
+    }
     [type="email"] {
         width: 580px;
         height: 50px;
@@ -292,12 +353,19 @@ body {
 }
 
 .black-block__icons {
-    .flexE(0, 1, 150px);
+    .flexE(1, 1, 100px);
     .row();
     justify-content: @center;
-    align-items: @center;
+    align-items: @start;
     list-style: none;
     padding: 0;
+    order: 4;
+    margin: 0;
+    @media (min-width: 900px){
+       order: 3;
+       .flexE(0, 1, 150px);
+       align-items: @center;
+    }
     li {
         width: 45px;
         height: 45px;
@@ -310,14 +378,20 @@ body {
         cursor: pointer;
     }
 }
+
 .futer {
     .flexE(1);
     .row();
+    flex-wrap: wrap;
     color: #fff;
     font-size: 16px;
     font-family: PT Sans;
     font-weight: normal;
     padding-top: 5%;
+    order: 3;
+    @media (min-width: 900px){
+        order: 4;
+     }
     ul {
         list-style: none;
         padding: 0;
@@ -325,6 +399,14 @@ body {
     address {
         .flexE(1, 1, 30%);
         font-style: normal;
+        text-align: center;
+        padding-bottom: 10px;
+        order: 2;
+        @media (min-width: 900px){
+            text-align: left;
+            padding-bottom: 0;
+            order: 1;
+         }
         a {
            text-decoration: none;
            color: #fff;
@@ -333,10 +415,25 @@ body {
     .futer__links {
         .flexE(3, 1, 70%);
         .row();
+        flex-wrap: wrap;
         margin: 0;
         padding: 0;
+        @media (min-width: 900px){
+            order: 2;
+         }
     }
+
     .link-block {
-        .flexE(1);
+        .flexE(1, 1, 25%);
+        padding-left: 0;
+        text-align: center;
+        box-sizing: border-box;
+        @media (min-width: 900px){
+            padding-left: 5%;
+            text-align: left;
+         }
+        li {
+            cursor: pointer;
+        }
     }
 }
