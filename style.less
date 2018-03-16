@@ -10,7 +10,7 @@
 
 .flexE(@grow: 0, @shrink: 1, @basis: auto){
     flex: @grow @shrink @basis;
-}
+} 
 
 .mainPadd(){
     padding-left: 15%;
@@ -55,7 +55,7 @@ body {
 }
 
 .yellow-block__logo {
-    .flexE(3);
+    .flexE(2, 1, 80%);
     .row();
     text-decoration: none;
     color: @black;
@@ -63,6 +63,9 @@ body {
     font-weight: bold;
     font-size: 30px;
     justify-content: @start;
+    @media (min-width: 900px){
+        .flexE(3);
+    }
     img{
         padding-right: 10px;
     }
@@ -76,10 +79,22 @@ body {
     ul{
       list-style: none;
       .flexE(1, 1, 200px);  
-      .row();
+      display: none;
       justify-content: @sb;
       padding-left: 0;
       margin: 0;
+      @media (min-width: 900px){
+        .row();
+        } 
+    }
+    i {
+        display: inline-block;
+        .flexE(1, 1, 20%);
+        text-align: right;
+        cursor: pointer;
+        @media (min-width: 900px){
+            display: none;
+        } 
     }
 }
 
