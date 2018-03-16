@@ -469,3 +469,14 @@ body {
 .futer .link-block li {
   cursor: pointer;
 }
+.tablet__nav ul {
+  display: block;
+  position: absolute;
+  right: 15%;
+  top: 112px;
+}
+.tablet__nav ul li {
+  padding-bottom: 10%;
+  padding-top: 10%;
+  padding-right: 0;
+}
